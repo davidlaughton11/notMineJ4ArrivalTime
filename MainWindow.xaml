@@ -1,0 +1,17 @@
+﻿<Window x:Class="CulminatingProblemJ4ArrivalTime.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CulminatingProblemJ4ArrivalTime"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <StackPanel>
+        <TextBlock TextWrapping="Wrap">The input will be one line, which contains an expression of the form HH:MM, where HH is one of
+            the 24 starting hours (00, 01, . . ., 23) and MM is one of the three possible departure minute times
+            (00, 20, 40). Rush hour is 07:00 (7am) until 10:00 (10am) in the morning and 15:00 (3pm) until 19:00</TextBlock>
+        <TextBox x:Name="TimeInput">00:00</TextBox>
+        <Button x:Name="btnStart" Click="btnStart_Click">click</Button>
+        <Label x:Name="lblOutput"></Label>
+    </StackPanel>
+</Window>
