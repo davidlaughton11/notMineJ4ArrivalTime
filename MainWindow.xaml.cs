@@ -1,6 +1,6 @@
 ﻿/*David Laughton
  * june 6th 2019
- * Rush hour
+ * Rush hour problem
  */
 
 using System;
@@ -37,10 +37,14 @@ namespace CulminatingProblemJ4ArrivalTime
             int h, m, t;
             int.TryParse(splitHHMM[0], out h);
             int.TryParse(splitHHMM[1], out m);                     
-
+            
+            //to get the time in minutes
             t = h * 60 + m;
+            //int i equals the max amount of time travel can take
+            //adding to t because that is how the travel works adding minutes
             for (int i = 240; i > 0; t++)
             {
+                //an if and else if statement to keep the time twice as slow if they are in 
                 if (t >= 7 * 60 && t < 10 * 60)
                 {
                     i--;
@@ -49,13 +53,16 @@ namespace CulminatingProblemJ4ArrivalTime
                 {
                     i--;
                 }
+                //else for if the travel is not in rush hour
                 else
                 {
                     i -= 2;
                 }
             }
+            //the minutes and hours after the time is adjusted
             int MM = t % 60;
             int HH = t / 60 % 24;
+            //outputing the proper arrival time
             if (MM < 10)
             {
                 lblOutput.Content = HH + ":" + MM + "0";
