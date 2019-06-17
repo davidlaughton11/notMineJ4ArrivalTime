@@ -65,7 +65,7 @@ namespace CulminatingProblemJ4ArrivalTime
             //outputing the proper arrival time
             if (MM < 10)
             {
-                lblOutput.Content = HH + ":" + MM + "0";
+                lblOutput.Content = HH + ":" + "0" + MM ;
             }
             else
             {
